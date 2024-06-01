@@ -29,6 +29,9 @@ namespace WindowsFormsApp1
         //private Stack<string> redoStack = new Stack<string>();     
         private const int MaxHistoryCount = 10;
 
+        private int selectionStart = 0;                            // 記錄文字反白的起點
+        private int selectionLength = 0;                           // 記錄文字反白的長度
+
         // 初始化字體下拉選單
         private void InitializeFontComboBox()
         {
@@ -255,8 +258,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        private int selectionStart = 0;                            // 記錄文字反白的起點
-        private int selectionLength = 0;                           // 記錄文字反白的長度
 
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
