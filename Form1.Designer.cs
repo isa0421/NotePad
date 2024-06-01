@@ -35,6 +35,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.btnUndo = new System.Windows.Forms.Button();
             this.listUndo = new System.Windows.Forms.ListBox();
+            this.btnRedo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOpen
@@ -92,11 +93,23 @@
             this.listUndo.Size = new System.Drawing.Size(218, 469);
             this.listUndo.TabIndex = 4;
             // 
+            // btnRedo
+            // 
+            this.btnRedo.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRedo.Location = new System.Drawing.Point(532, 12);
+            this.btnRedo.Name = "btnRedo";
+            this.btnRedo.Size = new System.Drawing.Size(159, 57);
+            this.btnRedo.TabIndex = 5;
+            this.btnRedo.Text = "重做下一步";
+            this.btnRedo.UseVisualStyleBackColor = true;
+            this.btnRedo.Click += new System.EventHandler(this.btnRedo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 576);
+            this.Controls.Add(this.btnRedo);
             this.Controls.Add(this.listUndo);
             this.Controls.Add(this.btnUndo);
             this.Controls.Add(this.btnSave);
@@ -117,6 +130,7 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button btnUndo;
         private System.Windows.Forms.ListBox listUndo;
+        private System.Windows.Forms.Button btnRedo;
     }
 }
 
