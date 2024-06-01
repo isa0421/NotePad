@@ -33,6 +33,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.btnUndo = new System.Windows.Forms.Button();
+            this.listUndo = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnOpen
@@ -48,11 +50,12 @@
             // 
             // rtbText
             // 
-            this.rtbText.Location = new System.Drawing.Point(37, 75);
+            this.rtbText.Location = new System.Drawing.Point(37, 83);
             this.rtbText.Name = "rtbText";
-            this.rtbText.Size = new System.Drawing.Size(762, 476);
+            this.rtbText.Size = new System.Drawing.Size(722, 469);
             this.rtbText.TabIndex = 1;
             this.rtbText.Text = "";
+            this.rtbText.TextChanged += new System.EventHandler(this.rtbText_TextChanged);
             // 
             // btnSave
             // 
@@ -69,11 +72,33 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // btnUndo
+            // 
+            this.btnUndo.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnUndo.Location = new System.Drawing.Point(367, 12);
+            this.btnUndo.Name = "btnUndo";
+            this.btnUndo.Size = new System.Drawing.Size(159, 57);
+            this.btnUndo.TabIndex = 3;
+            this.btnUndo.Text = "復原上一步";
+            this.btnUndo.UseVisualStyleBackColor = true;
+            this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
+            // 
+            // listUndo
+            // 
+            this.listUndo.FormattingEnabled = true;
+            this.listUndo.ItemHeight = 15;
+            this.listUndo.Location = new System.Drawing.Point(765, 83);
+            this.listUndo.Name = "listUndo";
+            this.listUndo.Size = new System.Drawing.Size(218, 469);
+            this.listUndo.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 576);
+            this.Controls.Add(this.listUndo);
+            this.Controls.Add(this.btnUndo);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.rtbText);
             this.Controls.Add(this.btnOpen);
@@ -90,6 +115,8 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button btnUndo;
+        private System.Windows.Forms.ListBox listUndo;
     }
 }
 
